@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react';
+import { Route,Routes } from 'react-router-dom';
+import Signuppage from './pages/Signuppage';
+import Loginpage from './pages/Loginpage';
+import Dashboardpage from './pages/Dashboardpage';
 
 function App() {
+
+  const [isAuth,setIsAuth]=useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div >
+     <Routes>
+          <Route path="/" element= {<Signuppage auth={isAuth}  change= {setIsAuth} />}  />
+          <Route path="/login" element= {<Loginpage  auth={isAuth}  change= {setIsAuth} />} />
+          <Route path="/Dashboard" element= {<Dashboardpage  auth={isAuth}  change= {setIsAuth} />} />
+     </Routes>
+   
+   </div>
   );
 }
 
