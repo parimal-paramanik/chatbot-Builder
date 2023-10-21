@@ -5,7 +5,9 @@ const { UserRouter } = require('./Routes/userRoute')
 const port= process.env.PORT
 const app= express()
 app.use(express.json())
-const cors= require("cors")
+const cors= require("cors");
+const { ChatRouter } = require('./Routes/chatBoatRoute');
+const { QueRouter } = require('./Routes/questionRoute');
 
 app.get("/",(req,res)=>{
     res.send("Everything is working fine")
@@ -13,6 +15,10 @@ app.get("/",(req,res)=>{
 app.use(cors())
 
 app.use("/user",UserRouter)
+app.use("/chatboat",ChatRouter)
+app.use("/question",QueRouter)
+
+
 app.use(
     session({
       secret: "your-secret-key",
