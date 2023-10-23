@@ -6,6 +6,7 @@ const {userModel}= require("../Models/UserModel")
 
 const AllQue = async(req,res)=>{
     try {
+      // asyncronouse opeartion 
         const {chatbotId} = req.body
       const chatboat= await questionModel.find({chatbot:chatbotId})
       res.send(chatboat)
