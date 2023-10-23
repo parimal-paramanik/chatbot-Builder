@@ -1,9 +1,10 @@
 import React from 'react'
 import Dashboard from '../component/Dashboard'
+
 const Dashboardpage = () => {
   return (
     <div>
-      <Dashboard/>
+      <Dashboard />
     </div>
   )
 }

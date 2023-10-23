@@ -1,13 +1,18 @@
 import React from 'react';
 
 const MessageParser = ({ children, actions }) => {
-  const parse = (message) => {
-    // console.log(message);
-    if (message.includes('hello')) {
-        actions.handleHello();
-      }
-        
-  };
+    const parse = (message) => {
+        if (message.type === 'client') {
+          if (message.content === 'OptionA') {
+            actions.handleOptionA();
+          } else if (message.content === 'OptionB') {
+            actions.handleOptionB();
+          } else if (message.content === 'OptionC') {
+            actions.handleOptionC();
+          }
+        }
+      };
+      
 
   return (
     <div>

@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
+
+
 const Signup = () => {
 const URL= "http://localhost:8080"
 const [name, setName] = React.useState("");
@@ -52,6 +54,7 @@ const nameChange = (e) => {
 
 
     return (
+      
         <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0  ">
             
           <div className="md:w-1/3 max-w-sm">
