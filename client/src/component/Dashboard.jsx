@@ -1,11 +1,21 @@
-import React from 'react'
 
-const Dashboard = () => {
-  return (
+import config from "./Chatbot/config";
+import ActionProvider from "./Chatbot/ActionProvider";
+import MessageParser from "./Chatbot/MessageParser";
+import Chatbot from 'react-chatbot-kit'
+import 'react-chatbot-kit/build/main.css'
+const  Dashboard =()=> {
+ return(
     <div>
-      <h1>Welcome to Dashboard</h1>
-    </div>
-  )
+    <Chatbot
+      config={config}
+      messageParser={MessageParser}
+      actionProvider={ActionProvider}
+    />
+  </div>
+ )
+  
 }
 
-export default Dashboard
+export default Dashboard;
+
