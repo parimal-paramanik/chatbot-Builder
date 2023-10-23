@@ -54,7 +54,7 @@ const nameChange = (e) => {
 
 
     return (
-      
+      < div className= "bg-slate-50">
         <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0  ">
             
           <div className="md:w-1/3 max-w-sm">
@@ -62,7 +62,6 @@ const nameChange = (e) => {
               src="https://app.chat360.io/static/media/Login.6edea181.svg"
               alt="imagelink" />
           </div>
-
           <form  className="md:w-1/3 max-w-sm " onSubmit={handleSubmit}>
             <input className="text-sm w-full px-4 mb-5 py-2 border border-solid border-gray-400 rounded" type="text" placeholder="Enter Full Name"   value={name}
           onChange={nameChange}/>
@@ -91,6 +90,7 @@ const nameChange = (e) => {
             </div>
           </form >
         </section>
+        </div>
       );
   
 }

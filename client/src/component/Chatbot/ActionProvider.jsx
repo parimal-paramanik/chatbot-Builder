@@ -1,109 +1,139 @@
- import React from "react";
-
+import React from "react";
 
 const ActionProvider = ({ createChatBotMessage, setState, createClientMessage, children }) => {
-
     const createClientOptionsMessage = (text, options) => {
-        return {
-          type: 'client',
-          content: text,
-          suggestions: options,
-        };
+      return {
+        type: 'client',
+        content: text,
+        suggestions: options,
       };
-      
-      const handleHello = () => {
-        const options = ['OptionA', 'OptionB', 'OptionC'];
-        const botMessage = createChatBotMessage('Please choose an option:', {
-          withAvatar: true,
-          delay: 500,
-        });
-      
-        const optionsMessage = createClientOptionsMessage('Choose an option:', options); // Set a content value that matches the cases in parse
-      
-        setState((prev) => ({
-          ...prev,
-          messages: [...prev.messages, botMessage, optionsMessage],
-        }));
-      };
-      
-      
-
+    };
   
-
-    // Other functions for handling OptionA, OptionB, etc.
+    const handleHello = () => {
+      const options = ['customer Care', 'Recharge', 'Other'];
+      const botMessage = createChatBotMessage('Please choose an option:', {
+        withAvatar: true,
+        delay: 500,
+      });
+  
+      const optionsMessage = createClientOptionsMessage('Choose an option:', options);
+  
+      setState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, botMessage, optionsMessage],
+      }));
+    };
+  
     const handleOptionA = () => {
-        const botMessage = createChatBotMessage('You chose OptionA. Now choose one:', {
-          withAvatar: true,
-          delay: 500,
-          widget: 'options',
-          widgetProps: {
-            options: [
-              {
-                text: 'OptionA',
-                handler: () => handleOptionA(),
-              },
-              {
-                text: 'OptionB',
-                handler: () => handleOptionB(),
-              },
-            ],
-          },
-        });
-    
-        setState((prev) => ({
-          ...prev,
-          messages: [...prev.messages, botMessage],
-        }));
-      };
-    
-      const handleOptionB = () => {
-        const botMessage = createChatBotMessage('You chose OptionB. Now choose one:', {
-          withAvatar: true,
-          delay: 500,
-          widget: 'options',
-          widgetProps: {
-            options: [
-              {
-                text: 'OptionA',
-                handler: () => handleOptionA(),
-              },
-              {
-                text: 'OptionB',
-                handler: () => handleOptionB(),
-              },
-            ],
-          },
-        });
-    
-        setState((prev) => ({
-          ...prev,
-          messages: [...prev.messages, botMessage],
-        }));
-      };
-    
-      const handleOptionC = () => {
-        const botMessage = createChatBotMessage('You chose OptionC. Now choose one:', {
-          withAvatar: true,
-          delay: 500,
-          widget: 'options',
-          widgetProps: {
-            options: [
-              {
-                text: 'OptionA',
-                handler: () => handleOptionA(),
-              },
-              {
-                text: 'OptionB',
-                handler: () => handleOptionB(),
-              },
-            ],
-          },
-        });
-        setState((prev) => ({
-            ...prev,
-            messages: [...prev.messages, botMessage],
-          }));
-        };
+      const botMessage = createChatBotMessage('You chose OptionA. Now choose one:', {
+        withAvatar: true,
+        delay: 500,
+        widget: 'options',
+        widgetProps: {
+          options: [
+            {
+              text: '1800 5696',
+              handler: () => handleOptionAChoice('1800 5696'),
+            },
+            {
+              text: 'customer@gmail.com',
+              handler: () => handleOptionAChoice('customer@gmail.com'),
+            },
+          ],
+        },
+      });
+  
+      setState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, botMessage],
+      }));
+    };
+  
+    const handleOptionAChoice = (choice) => {
+      const botMessage = createChatBotMessage(`You chose ${choice}.`, {
+        withAvatar: true,
+        delay: 500,
+      });
+  
+      setState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, botMessage],
+      }));
+    };
+  
+    const handleOptionB = () => {
+      const botMessage = createChatBotMessage('You chose OptionB. Now choose one:', {
+        withAvatar: true,
+        delay: 500,
+        widget: 'options',
+        widgetProps: {
+          options: [
+            {
+              text: 'Jio Number',
+              handler: () => handleOptionBChoice('Jio Number'),
+            },
+            {
+              text: 'Airtel Number',
+              handler: () => handleOptionBChoice('Airtel Number'),
+            },
+          ],
+        },
+      });
+  
+      setState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, botMessage],
+      }));
+    };
+  
+    const handleOptionBChoice = (choice) => {
+      const botMessage = createChatBotMessage(`You chose ${choice}.`, {
+        withAvatar: true,
+        delay: 500,
+      });
+  
+      setState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, botMessage],
+      }));
+    };
+  
+    const handleOptionC = () => {
+      const botMessage = createChatBotMessage('You chose OptionC. Now choose one:', {
+        withAvatar: true,
+        delay: 500,
+        widget: 'options',
+        widgetProps: {
+          options: [
+            {
+              text: 'Other one',
+              handler: () => handleOptionCChoice('Other one'),
+            },
+            {
+              text: 'Other Two',
+              handler: () => handleOptionCChoice('Other Two'),
+            },
+          ],
+        },
+      });
+  
+      setState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, botMessage],
+      }));
+    };
+  
+    const handleOptionCChoice = (choice) => {
+      const botMessage = createChatBotMessage(`You chose ${choice}.`, {
+        withAvatar: true,
+        delay: 500,
+      });
+  
+      setState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, botMessage],
+      }));
+    };
   
     return (
       <div>
@@ -114,7 +144,6 @@ const ActionProvider = ({ createChatBotMessage, setState, createClientMessage, c
               handleOptionA,
               handleOptionB,
               handleOptionC,
-              // Other action handlers here for OptionA, OptionB, etc.
             },
           });
         })}
@@ -122,4 +151,5 @@ const ActionProvider = ({ createChatBotMessage, setState, createClientMessage, c
     );
   };
   
-  export default ActionProvider
+  export default ActionProvider;
+  

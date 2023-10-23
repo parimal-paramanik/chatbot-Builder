@@ -15,6 +15,7 @@ const  Dashboard =()=> {
     };
   
     return (
+        
       <div>
         <div>
           <Navbar onToggleChatbot={toggleChatbot} />
@@ -29,6 +30,7 @@ const  Dashboard =()=> {
           )}
         </div>
       </div>
+     
     );
   
 }
