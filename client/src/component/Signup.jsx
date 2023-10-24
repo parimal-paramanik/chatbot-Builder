@@ -54,22 +54,24 @@ const nameChange = (e) => {
 
 
     return (
-      < div className= "bg-slate-50">
+      < div className= "bg-slate-100 ">
         <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0  ">
             
-          <div className="md:w-1/3 max-w-sm">
+          <div className="md:w-1/3 max-w-sm  mt-10" >
             <img
               src="https://app.chat360.io/static/media/Login.6edea181.svg"
               alt="imagelink" />
           </div>
-          <form  className="md:w-1/3 max-w-sm " onSubmit={handleSubmit}>
-            <input className="text-sm w-full px-4 mb-5 py-2 border border-solid border-gray-400 rounded" type="text" placeholder="Enter Full Name"   value={name}
+          
+          <form  className="md:w-1/3 max-w-sm   bg-blue-400  p-10 rounded-lg mb-10" onSubmit={handleSubmit}>
+          <h1 className="text-3xl font-bold mb-5 text-center text-white">Signup</h1>
+            <input className="text-sm w-full px-4 mb-5 py-2 border border-solid border-gray-400 rounded text-center" type="text" placeholder="Enter Full Name"   value={name}
           onChange={nameChange}/>
 
-            <input className="text-sm w-full px-4 py-2 border border-solid border-gray-400 rounded " type="text" placeholder="Email Address"   value={email}
+            <input className="text-sm w-full px-4 py-2 border border-solid text-center border-gray-400 rounded " type="text" placeholder=" Enter Email Address"   value={email}
           onChange={emailChange} />
 
-            <input className="text-sm w-full px-4 py-2 border border-solid border-gray-400 rounded mt-4" type="password" placeholder="Password"  value={password}
+            <input className="text-sm w-full px-4 py-2 border border-solid text-center border-gray-400 rounded mt-4" type="password" placeholder=" Enter Password"  value={password}
           onChange={passwordChange} />
 
             <div className="mt-4 flex justify-between font-semibold text-sm">
@@ -89,6 +91,7 @@ const nameChange = (e) => {
               Already Registered? <Link to ="/login" className="text-red-600 hover:underline hover:underline-offset-4" >Login</Link>
             </div>
           </form >
+       
         </section>
         </div>
       );

@@ -3,7 +3,7 @@ import {useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
 
-const Login = ({isAuth,change}) => {
+const Login = ({isAuth}) => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -39,7 +39,7 @@ const Login = ({isAuth,change}) => {
           localStorage.setItem("authorization", data.accessToken)
           alert("login successfull")
 
-          change(true);
+          // change(true);
           navigate("../Dashboard")
           
         }
@@ -58,18 +58,18 @@ const Login = ({isAuth,change}) => {
     loginFetch();
   }
     return (
-      <div className= "bg-slate-50">
+      <div className= "bg-slate-100">
         <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
           <div className="md:w-1/3 max-w-sm">
             <img
               src="https://app.chat360.io/static/media/AccountCreate.0dae923e.svg"
               alt="imagelink" />
           </div>
-          <form className="md:w-1/3 max-w-sm" onSubmit={handleSubmit}>
-
-            <input className="text-sm w-full px-4 py-2 border border-solid border-gray-400 rounded" type="text" placeholder="Email Address"  value={email}
+          <form className="md:w-1/3 max-w-sm bg-blue-400  p-10 rounded-lg " onSubmit={handleSubmit}>
+          <h1 className="text-3xl font-bold mb-5 text-center text-white">Login</h1>
+            <input className="text-sm w-full px-4 py-2 border text-center border-solid border-gray-400 rounded" type="text" placeholder=" Enter Email Address"  value={email}
             onChange={handleEmailChange} />
-            <input className="text-sm w-full px-4 py-2 border border-solid border-gray-400 rounded mt-4" type="password" placeholder="Password"  value={password}
+            <input className="text-sm w-full px-4 py-2 border border-solid text-center border-gray-400 rounded mt-4" type="password" placeholder=" Enter Password"  value={password}
             onChange={handlePasswordChange} />
             
             <div className="text-center md:text-left">

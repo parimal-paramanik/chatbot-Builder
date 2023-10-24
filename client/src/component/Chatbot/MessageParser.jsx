@@ -1,9 +1,12 @@
 import React from 'react';
 
+
 const MessageParser = ({ children, actions }) => {
   const parse = (message) => {
     console.log(children)
-    if (message.type === 'client') {
+    console.log(message)
+    if (message.type === 'client' && message.content === "hello") {
+      actions.handleHello()
       if (message.content.toLowerCase() === 'customer care') {
         actions.handleOptionA();
       } else if (message.content.toLowerCase() === 'recharge') {
