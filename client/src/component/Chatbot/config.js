@@ -9,7 +9,7 @@ const MyCustomAvatar = () => (
 
 
 const config = {
-  initialMessages: [createChatBotMessage(`Hi! I'm ${botName}. How may i help you` )],
+  initialMessages: [createChatBotMessage(`Hi! I'm ${botName}. How may i help you` ) ],
 
   customComponents: {
     header: () => (

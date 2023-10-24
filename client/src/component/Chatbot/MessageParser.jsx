@@ -2,6 +2,7 @@ import React from 'react';
 
 const MessageParser = ({ children, actions }) => {
   const parse = (message) => {
+    console.log(children)
     if (message.type === 'client') {
       if (message.content.toLowerCase() === 'customer care') {
         actions.handleOptionA();

@@ -16,16 +16,16 @@ const ActionProvider = ({ createChatBotMessage, setState, createClientMessage, c
         delay: 500,
       });
   
-      const optionsMessage = createClientOptionsMessage('Choose an option:', options);
+      const optionsMessage = createClientOptionsMessage( options);
   
       setState((prev) => ({
         ...prev,
-        messages: [...prev.messages, botMessage, optionsMessage],
+        messages: [...prev.messages, botMessage,optionsMessage],
       }));
     };
   
     const handleOptionA = () => {
-      const botMessage = createChatBotMessage('You chose OptionA. Now choose one:', {
+      const botMessage = createChatBotMessage('Now choose one:', {
         withAvatar: true,
         delay: 500,
         widget: 'options',
@@ -62,7 +62,7 @@ const ActionProvider = ({ createChatBotMessage, setState, createClientMessage, c
     };
   
     const handleOptionB = () => {
-      const botMessage = createChatBotMessage('You chose OptionB. Now choose one:', {
+      const botMessage = createChatBotMessage(' Now choose one:', {
         withAvatar: true,
         delay: 500,
         widget: 'options',
@@ -99,7 +99,7 @@ const ActionProvider = ({ createChatBotMessage, setState, createClientMessage, c
     };
   
     const handleOptionC = () => {
-      const botMessage = createChatBotMessage('You chose OptionC. Now choose one:', {
+      const botMessage = createChatBotMessage(' Now choose one:', {
         withAvatar: true,
         delay: 500,
         widget: 'options',
@@ -144,6 +144,7 @@ const ActionProvider = ({ createChatBotMessage, setState, createClientMessage, c
               handleOptionA,
               handleOptionB,
               handleOptionC,
+              handleOptionCChoice
             },
           });
         })}
