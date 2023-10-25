@@ -69,5 +69,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Links
 
-- [Live Demo](https://serene-kringle-87732f.netlify.app/)
+- [Live Demo](https://delicate-semifreddo-da459c.netlify.app/)
 
