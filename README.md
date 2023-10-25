@@ -3,7 +3,7 @@ Creating a GitHub README file for your "Prodigal AI" project is a great way to p
 ```markdown
 # Prodigal AI
 
-![Prodigal AI Logo](link_to_logo.png)
+
 
 Welcome to Prodigal AI, a platform for building chatbots with user management and chatbot integration.
 
