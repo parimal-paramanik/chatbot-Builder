@@ -26,7 +26,7 @@ Follow these steps to get started with Prodigal AI:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/prodigal-ai.git
+   git clone https://github.com/parimal-paramanik/chatbot-Builder.git
    ```
 
 2. **Install Dependencies:**
@@ -69,7 +69,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Links
 
-- [GitHub Repository](https://github.com/yourusername/prodigal-ai)
-- [Documentation](link_to_documentation)
-- [Live Demo](link_to_live_demo)
+- [Live Demo](https://serene-kringle-87732f.netlify.app/)
 
