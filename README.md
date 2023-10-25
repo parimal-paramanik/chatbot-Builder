@@ -52,7 +52,7 @@ Follow these steps to get started with Prodigal AI:
 
 ## Screenshots
 
-![Screenshot 1](./client/screenshot/Screenshot(255).png)
+![Screenshot 1](./client/screenshot/Screenshot(255)%20.png)
 
 
 ## Contributing
