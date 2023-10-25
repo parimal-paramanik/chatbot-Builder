@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const Signup = () => {
-const URL= "http://localhost:8080"
+const URL= "https://chatbot-backend-wkdl.onrender.com"
 const [name, setName] = React.useState("");
 const [email, setEmail] = React.useState("");
 const [password, setPassword] = React.useState("");
@@ -84,7 +84,7 @@ const nameChange = (e) => {
             <div className="text-center md:text-left">
               <button className="mt-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider" type="submit"  value="Signup">Signup</button>
 
-              <a href='http://localhost:8080/user/auth/google'><button className="mt-4 bg-red-600 hover:bg-red-700 px-4 py-2 ml-4 text-white uppercase rounded text-xs tracking-wider " type="button">Google </button></a>
+              <a href='https://chatbot-backend-wkdl.onrender.com/user/auth/google'><button className="mt-4 bg-red-600 hover:bg-red-700 px-4 py-2 ml-4 text-white uppercase rounded text-xs tracking-wider " type="button">Google </button></a>
             </div>
 
             <div className="mt-4 font-semibold text-sm text-slate-500 text-center md:text-left">

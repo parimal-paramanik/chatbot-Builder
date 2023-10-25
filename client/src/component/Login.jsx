@@ -23,7 +23,7 @@ const Login = ({isAuth}) => {
       password,
     };
 
-    fetch("http://localhost:8080/user/login", {
+    fetch("https://chatbot-backend-wkdl.onrender.com/user/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
