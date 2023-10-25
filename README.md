@@ -32,7 +32,7 @@ Follow these steps to get started with Prodigal AI:
 2. **Install Dependencies:**
 
    ```bash
-   cd prodigal-ai
+   cd client
    npm install
    ```
 
